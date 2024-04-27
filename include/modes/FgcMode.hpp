@@ -5,9 +5,9 @@
 #include "core/socd.hpp"
 #include "core/state.hpp"
 
-class Celeste : public ControllerMode {
+class FGCMode : public ControllerMode {
   public:
-    Celeste(socd::SocdType horizontal_socd, socd::SocdType vertical_socd);
+    FGCMode(socd::SocdType horizontal_socd, socd::SocdType vertical_socd);
 
   private:
     void UpdateDigitalOutputs(InputState &inputs, OutputState &outputs);

@@ -20,7 +20,8 @@ void Celeste::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
     outputs.a = inputs.x || inputs.mod_x;
     outputs.x = inputs.a;
     outputs.b = inputs.b;
-    outputs.z = inputs.z;
+    outputs.buttonR = inputs.z;
+    outputs.y = inputs.y;
 
 
     // Directional Dashes
