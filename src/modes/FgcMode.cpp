@@ -1,6 +1,6 @@
 #include "modes/FgcMode.hpp"
 
-FgcMode::FgcMode(socd::SocdType horizontal_socd, socd::SocdType vertical_socd) {
+Celeste::Celeste(socd::SocdType horizontal_socd, socd::SocdType vertical_socd) {
     _socd_pair_count = 5;
     _socd_pairs = new socd::SocdPair[_socd_pair_count]{
         socd::SocdPair{&InputState::left,   &InputState::right, horizontal_socd         },
@@ -15,7 +15,7 @@ FgcMode::FgcMode(socd::SocdType horizontal_socd, socd::SocdType vertical_socd) {
     };
 }
 
-void FgcMode::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
+void Celeste::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
     // Directions
     outputs.dpadLeft = inputs.left;
     outputs.dpadRight = inputs.right;
@@ -40,7 +40,7 @@ void FgcMode::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
     outputs.buttonL = inputs.midshield;
 }
 
-void FgcMode::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs) {
+void Celeste::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs) {
     outputs.leftStickX = 128;
     outputs.leftStickY = 128;
     outputs.rightStickX = 128;

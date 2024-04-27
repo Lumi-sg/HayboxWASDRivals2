@@ -1,5 +1,5 @@
-#ifndef _MODES_FGCMODE_HPP
-#define _MODES_FGCMODE_HPP
+#ifndef _MODES_CELESTE_HPP
+#define _MODES_CELESTE_HPP
 
 #include "core/ControllerMode.hpp"
 #include "core/socd.hpp"
