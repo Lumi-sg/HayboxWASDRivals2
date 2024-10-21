@@ -78,9 +78,9 @@ void setup() {
     // Turn on LED to indicate firmware booted.
     // Just imagine the LED is on 4Head.
 
-    // gpio_init(PICO_DEFAULT_LED_PIN);
-    // gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);
-    // gpio_put(PICO_DEFAULT_LED_PIN, 1);
+    gpio_init(PICO_DEFAULT_LED_PIN);
+    gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);
+    gpio_put(PICO_DEFAULT_LED_PIN, 1);
 
     // Create array of input sources to be used.
     static InputSource *input_sources[] = { gpio_input };

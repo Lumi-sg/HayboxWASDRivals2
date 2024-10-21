@@ -21,6 +21,7 @@ void Rivals2::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
     outputs.x = inputs.x;
     outputs.y = inputs.y;
     outputs.buttonR = inputs.z;
+
     if (inputs.nunchuk_connected) {
         // Lightshield with C button.
         if (inputs.nunchuk_c) {
@@ -47,12 +48,14 @@ void Rivals2::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
 }
 
 void Rivals2::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs) {
+    //Bind up2/W to up.
+    bool upPressed = inputs.up || inputs.up2;
     // Coordinate calculations to make modifier handling simpler.
     UpdateDirections(
         inputs.left,
         inputs.right,
         inputs.down,
-        inputs.up,
+        upPressed,
         inputs.c_left,
         inputs.c_right,
         inputs.c_down,
@@ -83,6 +86,7 @@ void Rivals2::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs) {
     zetterburn can angle a bit steeper around 0.1 
    
    */
+
 
     if (inputs.mod_x) {
         if (directions.horizontal) {
