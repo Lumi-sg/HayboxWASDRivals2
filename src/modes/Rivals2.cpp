@@ -65,9 +65,9 @@ void Rivals2::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs) {
 
    bool shield_button_pressed = inputs.r || inputs.l;
 
-   if (directions.diagonal) { //added this conditional to give joystick accurate diagonals rather than (+/- 1.2, 1.2) should be (0.7~, 0.7~)
-    outputs.leftStickX = 128 + (directions.x * 90);
-    outputs.leftStickY = 128 + (directions.y * 90);
+   if (directions.diagonal) { //added this conditional to give joystick accurate diagonals rather than (+/- 1.2, 1.2) should be (0.87~, 0.87~)
+    outputs.leftStickX = 128 + (directions.x * 100);
+    outputs.leftStickY = 128 + (directions.y * 100);
    }
 
    /* coordinate notes

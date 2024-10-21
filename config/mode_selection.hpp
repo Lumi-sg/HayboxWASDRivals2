@@ -8,6 +8,7 @@
 #include "modes/Melee20Button.hpp"
 #include "modes/ProjectM.hpp"
 #include "modes/RivalsOfAether.hpp"
+#include "modes/Rivals2.hpp"
 #include "modes/Ultimate.hpp"
 #include "modes/Celeste.hpp"
 
@@ -54,6 +55,8 @@ void select_mode(CommunicationBackend *backend) {
             set_mode(backend, new FGCMode(socd::SOCD_NEUTRAL, socd::SOCD_NEUTRAL));
         } else if (inputs.b) {
             set_mode(backend, new RivalsOfAether(socd::SOCD_2IP));
+            } else if (inputs.r) {
+            set_mode(backend, new Rivals2(socd::SOCD_2IP));
         } else if (inputs.up2) {
             set_mode(backend, new MeleeWASD(socd::SOCD_2IP));
         } else if (inputs.z) {
