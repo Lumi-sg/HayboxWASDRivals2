@@ -48,14 +48,14 @@ void Rivals2::UpdateDigitalOutputs(InputState &inputs, OutputState &outputs) {
 }
 
 void Rivals2::UpdateAnalogOutputs(InputState &inputs, OutputState &outputs) {
-    //Bind up2/W to up.
-    bool upPressed = inputs.up || inputs.up2;
+
     // Coordinate calculations to make modifier handling simpler.
     UpdateDirections(
         inputs.left,
         inputs.right,
         inputs.down,
-        upPressed,
+        //turn W into Up for Wrastor experiment
+        inputs.up || inputs.up2,
         inputs.c_left,
         inputs.c_right,
         inputs.c_down,
